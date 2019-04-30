@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use PrestaShop\CodingStandard\Command\CsFixerInitCommand;
+
+$app = new Application();
+$app->add(new CsFixerInitCommand());
+$app->run();
