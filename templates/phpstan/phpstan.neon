@@ -1,0 +1,11 @@
+parameters:
+  reportUnmatchedIgnoredErrors: false
+  bootstrap: /web/module/tests/php/phpstan/bootstrap.php
+  paths:
+    - /web/module/src
+  ignoreErrors:
+    # module specific
+    - '~Iterating over an object of an unknown class mysqli_result\.~'
+    - '~Access to offset mixed on an unknown class mysqli_result\.~'
+
+  level: 5

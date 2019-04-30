@@ -9,12 +9,12 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Filesystem\Filesystem;
 
-class CsFixerInitCommand extends AbstractCommand
+class PhpStanInitCommand extends AbstractCommand
 {
     protected function configure()
     {
-        $this->setName('cs-fixer:init')
-            ->setDescription('Initialize Cs Fixer environement')
+        $this->setName('phpstan:init')
+            ->setDescription('Initialize phpstan environement')
             ->addOption(
                 'dest',
                 null,
@@ -27,17 +27,16 @@ class CsFixerInitCommand extends AbstractCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $fs = new Filesystem();
-        $directory = __DIR__ . '/../../templates/cs-fixer/';
+        $directory = __DIR__ . '/../../templates/phpstan/';
         $destination = $input->getOption('dest');
 
-        $phpcsDistFile = 'php_cs.dist';
-        $phpcsDistDestination = $destination . '/.' . $phpcsDistFile;
-
-        $this->copyFile(
-            $input,
-            $output,
-            $directory . $phpcsDistFile,
-            $phpcsDistDestination
-        );
+        foreach (['bootstrap.php', 'phpstan.neon'] as $template) {
+            $this->copyFile(
+                $input,
+                $output,
+                $directory . $template,
+                $destination . '/' . $template
+            );
+        }
     }
 }
