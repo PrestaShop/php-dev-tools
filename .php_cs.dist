@@ -5,6 +5,7 @@ $config = new PrestaShop\CodingStandard\CsFixer\Config();
 $config
     ->setUsingCache(true)
     ->getFinder()
-    ->in(__DIR__);
+    ->in(__DIR__)
+    ->exclude('vendor');
 
 return $config;
