@@ -11,10 +11,21 @@ composer require --dev prestashop/php-coding-standards
 
 ## Usage
 
+### PHP Cs fixer
+
 ```bash 
 $ ./bin/prestashop-coding-standard cs-fixer:init --dest /path/to/my/project
 ```
 
 It'll create a configuration file `.php_cs.dist` in the root of your project.
+
+### Phpstan
+
+```bash
+$ ./bin/prestashop-coding-standard phptan:init --dest /path/to/my/project
+```
+
+It'll create a `boostrap.php` and a `phpstan.neon` files, that are required to run phpstan.
+The default phpstan level is 5 ;)
 
 
