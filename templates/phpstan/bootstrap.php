@@ -2,20 +2,20 @@
 
 $rootDir = getenv('_PS_ROOT_DIR_');
 if (!$rootDir) {
-    echo '[ERROR] Define _PS_ROOT_DIR_ with the path to PrestaShop folder'. PHP_EOL;
+    echo '[ERROR] Define _PS_ROOT_DIR_ with the path to PrestaShop folder' . PHP_EOL;
     exit(1);
 }
 
 // Add module composer autoloader
-require_once dirname(__DIR__) . "/../../vendor/autoload.php";
+require_once dirname(__DIR__) . '/../../vendor/autoload.php';
 
 // Add PrestaShop composer autoload
 define('_PS_ADMIN_DIR_', $rootDir . '/admin-dev/');
 define('PS_ADMIN_DIR', _PS_ADMIN_DIR_);
 
-require_once $rootDir . "/config/defines.inc.php";
-require_once $rootDir . "/config/autoload.php";
-require_once $rootDir . "/config/bootstrap.php";
+require_once $rootDir . '/config/defines.inc.php';
+require_once $rootDir . '/config/autoload.php';
+require_once $rootDir . '/config/bootstrap.php';
 
 // Make sure loader php-parser is coming from php stan composer
 $loader = new \Composer\Autoload\ClassLoader();
@@ -26,7 +26,6 @@ $loader->register(true);
 // Ignoring the error partern with this value will throw another error if not found
 // during the checks.
 $constantsToDefine = [
-
   '_DB_SERVER_',
   '_DB_NAME_',
   '_DB_USER_',
