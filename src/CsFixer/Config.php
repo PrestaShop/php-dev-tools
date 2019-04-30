@@ -1,6 +1,6 @@
 <?php
 
-namespace PrestaShop\CodingStandard\CsFixer;
+namespace PrestaShop\CodingStandards\CsFixer;
 
 use PhpCsFixer\Config as BaseConfig;
 

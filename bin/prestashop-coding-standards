@@ -4,8 +4,8 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use PrestaShop\CodingStandard\Command\CsFixerInitCommand;
-use PrestaShop\CodingStandard\Command\PhpStanInitCommand;
+use PrestaShop\CodingStandards\Command\CsFixerInitCommand;
+use PrestaShop\CodingStandards\Command\PhpStanInitCommand;
 
 $app = new Application();
 $app->add(new CsFixerInitCommand());

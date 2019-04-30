@@ -1,6 +1,6 @@
 <?php
 
-$config = new PrestaShop\CodingStandard\CsFixer\Config();
+$config = new PrestaShop\CodingStandards\CsFixer\Config();
 
 $config
     ->setUsingCache(true)

@@ -1,6 +1,6 @@
 <?php
 
-namespace PrestaShop\CodingStandard\Command;
+namespace PrestaShop\CodingStandards\Command;
 
 use Symfony\Component\Console\Question\ConfirmationQuestion;
 use Symfony\Component\Console\Command\Command;

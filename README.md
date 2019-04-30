@@ -14,7 +14,7 @@ composer require --dev prestashop/php-coding-standards
 ### PHP Cs fixer
 
 ```bash 
-$ ./bin/prestashop-coding-standard cs-fixer:init --dest /path/to/my/project
+$ ./bin/prestashop-coding-standards cs-fixer:init --dest /path/to/my/project
 ```
 
 It'll create a configuration file `.php_cs.dist` in the root of your project.
@@ -22,7 +22,7 @@ It'll create a configuration file `.php_cs.dist` in the root of your project.
 ### Phpstan
 
 ```bash
-$ ./bin/prestashop-coding-standard phptan:init --dest /path/to/my/project
+$ ./bin/prestashop-coding-standards phptan:init --dest /path/to/my/project
 ```
 
 It'll create a `boostrap.php` and a `phpstan.neon` files, that are required to run phpstan.

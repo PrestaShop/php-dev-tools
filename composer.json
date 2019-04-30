@@ -1,6 +1,6 @@
 {
   "name": "prestashop/php-coding-standards",
-  "description": "PrestaShop coding standard",
+  "description": "PrestaShop coding standards",
   "version": "0.0.1",
   "require": {
     "symfony/console": "~3.2 || ~4.0",
@@ -11,7 +11,7 @@
   },
   "autoload": {
     "psr-4": {
-      "PrestaShop\\CodingStandard\\": "src/"
+      "PrestaShop\\CodingStandards\\": "src/"
     }
   }
 }
