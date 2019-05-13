@@ -1,7 +1,14 @@
 #!/usr/bin/env php
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+// OK, it's not, let give Composer autoloader a try!
+$autoloadFile = __DIR__.'/../../../autoload.php';
+if (file_exists($autoloadFile)) {
+    require_once $autoloadFile;
+} else {
+    require_once __DIR__.'/../vendor/autoload.php';
+}
+
 
 use Symfony\Component\Console\Application;
 use PrestaShop\CodingStandards\Command\CsFixerInitCommand;
