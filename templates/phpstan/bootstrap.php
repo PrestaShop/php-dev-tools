@@ -6,8 +6,10 @@ if (!$rootDir) {
     exit(1);
 }
 
+$pathToModuleRoot = __DIR__ . '/../../';
+
 // Add module composer autoloader
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once $pathToModuleRoot . 'vendor/autoload.php';
 
 // Add PrestaShop composer autoload
 define('_PS_ADMIN_DIR_', $rootDir . '/admin-dev/');
@@ -18,8 +20,14 @@ require_once $rootDir . '/config/autoload.php';
 require_once $rootDir . '/config/bootstrap.php';
 
 // Make sure loader php-parser is coming from php stan composer
+
+// 1- Use with Docker container
 $loader = new \Composer\Autoload\ClassLoader();
-$loader->setPsr4('PhpParser\\', array('/composer/vendor/nikic/php-parser/lib/PhpParser'));
+$loader->setPsr4('PhpParser\\', ['/composer/vendor/nikic/php-parser/lib/PhpParser']);
+$loader->register(true);
+// 2- Use with PHPStan phar
+$loader = new \Composer\Autoload\ClassLoader();
+$loader->setPsr4('PhpParser\\', ['phar://' . $pathToModuleRoot . 'vendor/phpstan/phpstan-shim/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/']);
 $loader->register(true);
 
 // We must declare these constant in this boostrap script.
