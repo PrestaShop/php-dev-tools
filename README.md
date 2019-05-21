@@ -6,7 +6,7 @@ This repository provides a configuration for [friendsofphp/php-cs-fixer](http://
 ## Installation
 
 ```
-composer require --dev prestashop/php-coding-standards
+composer require --dev prestashop/php-coding-standards:dev-master
 ```
 
 ## Usage
