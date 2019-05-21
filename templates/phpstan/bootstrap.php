@@ -7,7 +7,7 @@ if (!$rootDir) {
 }
 
 // Add module composer autoloader
-require_once dirname(__DIR__) . '/../../vendor/autoload.php';
+require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 // Add PrestaShop composer autoload
 define('_PS_ADMIN_DIR_', $rootDir . '/admin-dev/');
