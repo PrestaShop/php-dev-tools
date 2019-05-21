@@ -3,4 +3,4 @@ parameters:
   bootstrap: /web/module/tests/php/phpstan/bootstrap.php
   paths:
     - /web/module/src
-  level: 5
+  level: 1
