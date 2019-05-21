@@ -8,17 +8,13 @@
     "symfony/console": "~3.2 || ~4.0",
     "friendsofphp/php-cs-fixer": "^2.14",
     "squizlabs/php_codesniffer": "^3.4",
-    "symfony/filesystem": "~3.2 || ~4.0"
+    "symfony/filesystem": "~3.2 || ~4.0",
+    "phpstan/phpstan-shim": "^0.11.7"
   },
   "bin": ["bin/prestashop-coding-standards"],
   "autoload": {
     "psr-4": {
       "PrestaShop\\CodingStandards\\": "src/"
-    }
-  },
-  "config": {
-    "platform": {
-      "php": "5.6.0"
     }
   }
 }
