@@ -22,7 +22,7 @@ abstract class AbstractCommand extends Command
     protected function copyFile(InputInterface $input, OutputInterface $output, $source, $destination)
     {
         $fs = new Filesystem();
-        if ($fs->exists($destination) && !$this->askForOverwrite($input, $output)) {
+        if ($fs->exists($destination) && !$this->askForOverwrite($input, $output, $source, $destination)) {
             return;
         }
 
@@ -44,23 +44,34 @@ abstract class AbstractCommand extends Command
      * Ask for overwrite
      *
      * @param InputInterface $input
+     * @param OutputInterface $output
+     * @param string $source
+     * @param string $destination
      * @param string $message
-     * @param mixed $default
+     * @param bool $default
      *
      * @return bool
      */
     protected function askForOverwrite(
         InputInterface $input,
         OutputInterface $output,
-        $message = 'Overwrite?',
+        $source,
+        $destination,
+        $message = null,
         $default = false
     ) {
-        $helper = $this->getHelper('question');
-        $overwriteQuestion = new ConfirmationQuestion('Overwrite?', $default);
-        if (!$helper->ask($input, $output, $overwriteQuestion)) {
-            return false;
+        if (null === $message) {
+            $availableOptionsText = $default ? '[Y/n]' : '[y/N]';
+            $message = sprintf(
+                '%s already exists in destination folder %s. Overwrite? %s ',
+                pathinfo($source, PATHINFO_BASENAME),
+                pathinfo(realpath($destination), PATHINFO_DIRNAME),
+                $availableOptionsText
+            );
         }
+        $helper = $this->getHelper('question');
+        $overwriteQuestion = new ConfirmationQuestion($message, $default);
 
-        return true;
+        return $helper->ask($input, $output, $overwriteQuestion);
     }
 }
