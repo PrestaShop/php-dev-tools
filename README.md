@@ -28,6 +28,12 @@ $ php vendor/bin/prestashop-coding-standards phptan:init [--dest /path/to/my/pro
 It'll create a `boostrap.php` and a `phpstan.neon` files, by default in `tests/phpstan`, that are required to run phpstan.
 The default phpstan level is the lowest available, but we recommend you to update this value to get more recommandations.
 
+PHPStan is not provided by our dependancies, because of the PHP compatibility from projects using this repository. We recommend you to install it globally on your environment:
+
+```
+composer global require phpstan/phpstan-shim
+```
+
 ## Usage
 
 The configuration files added in your project can be freely modified in order to match your needs.
@@ -42,6 +48,14 @@ php vendor/bin/php-cs-fixer fix
 
 ### PHPStan
 
+If you installed PHPStan globally and made the folder available in your PATH:
+
 ```php
-$ _PS_ROOT_DIR_=<Path_to_PrestaShop> php vendor/bin/phpstan.phar --configuration=tests/phpstan/phpstan.neon analyse <path1 [path2 [...]]>
+$ _PS_ROOT_DIR_=<Path_to_PrestaShop> phpstan --configuration=tests/phpstan/phpstan.neon analyse <path1 [path2 [...]]>
+```
+
+Otherwise, you can specify the path to the PHPStan binary. For instance:
+
+```php
+$ _PS_ROOT_DIR_=<Path_to_PrestaShop> php ~/.composer/vendor/bin/phpstan.phar --configuration=tests/phpstan/phpstan.neon analyse <path1 [path2 [...]]>
 ```
