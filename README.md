@@ -22,13 +22,13 @@ It'll create a configuration file `.php_cs.dist` in the root of your project.
 ### Phpstan
 
 ```bash
-$ php vendor/bin/prestashop-coding-standards phptan:init [--dest /path/to/my/project]
+$ php vendor/bin/prestashop-coding-standards phpstan:init [--dest /path/to/my/project]
 ```
 
-It'll create a `boostrap.php` and a `phpstan.neon` files, by default in `tests/phpstan`, that are required to run phpstan.
+It'll create a `bootstrap.php` and a `phpstan.neon` files, by default in `tests/phpstan`, that are required to run phpstan.
 The default phpstan level is the lowest available, but we recommend you to update this value to get more recommandations.
 
-PHPStan is not provided by our dependancies, because of the PHP compatibility from projects using this repository. We recommend you to install it globally on your environment:
+PHPStan is not provided by our dependencies, because of the PHP compatibility from projects using this repository. We recommend you to install it globally on your environment:
 
 ```
 composer global require phpstan/phpstan-shim
@@ -48,7 +48,7 @@ php vendor/bin/php-cs-fixer fix
 
 ### PHPStan
 
-If you installed PHPStan globally and made the folder available in your PATH:
+If you have installed PHPStan globally and made the folder available in your PATH:
 
 ```php
 $ _PS_ROOT_DIR_=<Path_to_PrestaShop> phpstan --configuration=tests/phpstan/phpstan.neon analyse <path1 [path2 [...]]>
