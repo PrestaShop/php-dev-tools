@@ -18,7 +18,7 @@ class PhpStanInitCommand extends AbstractCommand
                 null,
                 InputOption::VALUE_REQUIRED,
                 'Where the configuration will be stored',
-                '.' // Current directory
+                'tests/phpstan' // Current directory
             );
     }
 
