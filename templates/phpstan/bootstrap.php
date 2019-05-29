@@ -27,7 +27,8 @@ $loader->setPsr4('PhpParser\\', ['/composer/vendor/nikic/php-parser/lib/PhpParse
 $loader->register(true);
 // 2- Use with PHPStan phar
 $loader = new \Composer\Autoload\ClassLoader();
-$loader->setPsr4('PhpParser\\', ['phar://' . $pathToModuleRoot . 'vendor/phpstan/phpstan-shim/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/']);
+// Contains the vendor in phar, like "phar://phpstan.phar/vendor"
+$loader->setPsr4('PhpParser\\', ['phar://' . dirname($_SERVER['PATH_TRANSLATED']) . '/../phpstan/phpstan-shim/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/']);
 $loader->register(true);
 
 // We must declare these constant in this boostrap script.
