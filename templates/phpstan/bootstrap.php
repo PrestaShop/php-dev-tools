@@ -30,6 +30,10 @@ $loader = new \Composer\Autoload\ClassLoader();
 // Contains the vendor in phar, like "phar://phpstan.phar/vendor"
 $loader->setPsr4('PhpParser\\', ['phar://' . dirname($_SERVER['PATH_TRANSLATED']) . '/../phpstan/phpstan-shim/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/']);
 $loader->register(true);
+// 3- Use phpstan phar with sym link
+$loader = new \Composer\Autoload\ClassLoader();
+$loader->setPsr4('PhpParser\\', ['phar://' . realpath($_SERVER['PATH_TRANSLATED']) . '/vendor/nikic/php-parser/lib/PhpParser/']);
+$loader->register(true);
 
 // We must declare these constant in this boostrap script.
 // Ignoring the error partern with this value will throw another error if not found
