@@ -74,7 +74,8 @@ $constantsToDefine = [
   '_PS_OS_PAYPAL_',
   '_PS_OS_WS_PAYMENT_',
   '_PS_OS_COD_VALIDATION_',
-  '_PS_THEME_DIR_'
+  '_PS_THEME_DIR_',
+  '_PS_BASE_URL_'
 ];
 
 foreach ($constantsToDefine as $constant) {
