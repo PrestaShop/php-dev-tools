@@ -34,6 +34,10 @@ $loader->register(true);
 $loader = new \Composer\Autoload\ClassLoader();
 $loader->setPsr4('PhpParser\\', ['phar://' . realpath($_SERVER['PATH_TRANSLATED']) . '/vendor/nikic/php-parser/lib/PhpParser/']);
 $loader->register(true);
+// 4 - Use module vendors
+$loader = new \Composer\Autoload\ClassLoader();
+$loader->setPsr4('PhpParser\\', ['vendor/nikic/php-parser/lib/PhpParser']);
+$loader->register(true);
 
 // We must declare these constant in this boostrap script.
 // Ignoring the error partern with this value will throw another error if not found
