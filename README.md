@@ -1,6 +1,12 @@
 # PrestaShop Coding Standards
 
-This repository provides a configuration for [friendsofphp/php-cs-fixer](http://github.com/FriendsOfPHP/PHP-CS-Fixer), [phpstan/phpstan](https://github.com/phpstan/phpstan) and includes tools to check that repositories are following the standards defined by the PrestaShop community.
+This repository includes tools to check that repositories are following the standards defined by the PrestaShop community and provides configuration files for some of them.
+
+Related packages:
+
+* [friendsofphp/php-cs-fixer](http://github.com/FriendsOfPHP/PHP-CS-Fixer)
+* [phpstan/phpstan](https://github.com/phpstan/phpstan)
+* [prestashop/header-stamp](https://github.com/PrestaShopCorp/header-stamp)
 
 
 ## Installation
@@ -59,3 +65,15 @@ Otherwise, you can specify the path to the PHPStan binary. For instance:
 ```php
 $ _PS_ROOT_DIR_=<Path_to_PrestaShop> php ~/.composer/vendor/bin/phpstan.phar --configuration=tests/phpstan/phpstan.neon analyse <path1 [path2 [...]]>
 ```
+
+### Header Stamp
+
+Your license headers can be updated by applying the header stamp.
+
+Here is an example of call, applying the default license on a PrestaShop module:
+
+```php
+$ vendor/bin/header-stamp --license=assets/afl.txt --exclude=vendor,node_modules
+```
+
+Available options are provided with `--help`.
