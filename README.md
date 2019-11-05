@@ -12,7 +12,7 @@ Related packages:
 ## Installation
 
 ```
-composer require --dev prestashop/php-coding-standards:dev-master
+composer require --dev prestashop/php-dev-tools
 ```
 
 When this project is successfully added to your dependencies, you can enable each review tool on your projet.
