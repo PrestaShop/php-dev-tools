@@ -40,6 +40,7 @@ class Config extends BaseConfig
             'self_accessor' => false,
             'yoda_style' => null,
             'non_printable_character' => true,
+            'no_superfluous_phpdoc_tags' => false,
         ];
 
         return $rules;
