@@ -1,4 +1,7 @@
 parameters:
   reportUnmatchedIgnoredErrors: false
   bootstrap: tests/phpstan/bootstrap.php
+  dynamicConstantNames:
+    - _PS_VERSION_
+
   level: 1
