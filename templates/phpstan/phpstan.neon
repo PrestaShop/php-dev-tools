@@ -1,7 +1,7 @@
+includes:
+  # We consider that the extension file is stored by default in the project folder test/phpstan
+  - ../../vendor/prestashop/php-dev-tools/phpstan/extension.neon
+    
 parameters:
   reportUnmatchedIgnoredErrors: false
-  bootstrap: tests/phpstan/bootstrap.php
-  dynamicConstantNames:
-    - _PS_VERSION_
-
-  level: 1
+  level: max

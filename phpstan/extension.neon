@@ -1,0 +1,4 @@
+parameters:
+  bootstrap: %currentWorkingDirectory%/vendor/prestashop/php-dev-tools/phpstan/bootstrap.php
+  dynamicConstantNames:
+    - _PS_VERSION_

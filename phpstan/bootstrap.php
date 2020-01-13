@@ -6,7 +6,8 @@ if (!$rootDir) {
     exit(1);
 }
 
-$pathToModuleRoot = __DIR__ . '/../../';
+// This file will be in the directory vendor/prestashop/php-dev-tools/phpstan.
+$pathToModuleRoot = __DIR__ . '/../../../../';
 
 // Add module composer autoloader
 require_once $pathToModuleRoot . 'vendor/autoload.php';
