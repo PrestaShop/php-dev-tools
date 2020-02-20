@@ -40,6 +40,8 @@ class Config extends BaseConfig
             'self_accessor' => false,
             'yoda_style' => null,
             'non_printable_character' => true,
+            'normalize_index_brace' => false,
+            'array_syntax' => false,
         ];
 
         return $rules;
