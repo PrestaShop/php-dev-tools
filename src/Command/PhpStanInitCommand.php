@@ -28,7 +28,7 @@ class PhpStanInitCommand extends AbstractCommand
         $directory = __DIR__ . '/../../templates/phpstan/';
         $destination = $input->getOption('dest');
 
-        foreach (['bootstrap.php', 'phpstan.neon'] as $template) {
+        foreach (['phpstan.neon'] as $template) {
             $this->copyFile(
                 $input,
                 $output,
