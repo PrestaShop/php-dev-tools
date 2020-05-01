@@ -1,4 +1,13 @@
 <?php
+declare(strict_types = 1);
+
+function requireFileIfItExists(string $filepath) : bool {
+    if (file_exists($filepath)) {
+        require_once $filepath;
+        return true;
+    }
+    return false;
+}
 
 $rootDir = getenv('_PS_ROOT_DIR_');
 if (!$rootDir) {
@@ -16,6 +25,7 @@ require_once $pathToModuleRoot . 'vendor/autoload.php';
 define('_PS_ADMIN_DIR_', $rootDir . '/admin-dev/');
 define('PS_ADMIN_DIR', _PS_ADMIN_DIR_);
 
+requireFileIfItExists($rootDir . '/tools/smarty/Smarty.class.php');
 require_once $rootDir . '/config/defines.inc.php';
 require_once $rootDir . '/config/autoload.php';
 require_once $rootDir . '/config/bootstrap.php';
@@ -95,3 +105,22 @@ foreach ($constantsToDefine as $key => $value) {
     }
 }
 
+/*
+ * At this time if _PS_VERSION_ is still undefined, this is likely because
+ * - we are on a old PrestaShop (below 1.7.0.0),
+ * - the shop hasn't been installed yet.
+ * 
+ * In that case, the constant can be set from another one in the installation folder. 
+ */
+if (!defined('_PS_VERSION_')) {
+    $legacyInstallationFileDefiningConstant = [
+        '/install-dev/install_version.php',
+        '/install/install_version.php',
+    ];
+    foreach ($legacyInstallationFileDefiningConstant as $file) {
+        if (requireFileIfItExists($rootDir . $file)) {
+            define('_PS_VERSION_', _PS_INSTALL_VERSION_);
+            break;
+        }
+    }
+}
