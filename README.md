@@ -31,13 +31,13 @@ It'll create a configuration file `.php_cs.dist` in the root of your project.
 $ php vendor/bin/prestashop-coding-standards phpstan:init [--dest /path/to/my/project]
 ```
 
-It'll create a `bootstrap.php` and a `phpstan.neon` files, by default in `tests/phpstan`, that are required to run phpstan.
+It'll create a default file `phpstan.neon` in `tests/phpstan`, that are required to run phpstan.
 The default phpstan level is the lowest available, but we recommend you to update this value to get more recommandations.
 
 PHPStan is not provided by our dependencies, because of the PHP compatibility from projects using this repository. We recommend you to install it globally on your environment:
 
 ```
-composer global require phpstan/phpstan-shim
+composer global require phpstan/phpstan:^0.12
 ```
 
 ## Usage
@@ -65,6 +65,12 @@ Otherwise, you can specify the path to the PHPStan binary. For instance:
 ```php
 $ _PS_ROOT_DIR_=<Path_to_PrestaShop> php ~/.composer/vendor/bin/phpstan.phar --configuration=tests/phpstan/phpstan.neon analyse <path1 [path2 [...]]>
 ```
+
+If GitHub Actions are used to run PHPStan, an additional error formater allows feedback to be added as annotations in pull-requests diff:
+
+![Report with annotation](https://user-images.githubusercontent.com/6768917/82919118-82a00c00-9f6d-11ea-8519-267aad6897d4.png)
+
+Add `--error-format github` at the end of the command to use it.
 
 ### Header Stamp
 

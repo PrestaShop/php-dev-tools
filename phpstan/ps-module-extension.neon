@@ -2,3 +2,10 @@ parameters:
   bootstrap: %currentWorkingDirectory%/vendor/prestashop/php-dev-tools/phpstan/bootstrap.php
   dynamicConstantNames:
     - _PS_VERSION_
+
+services:
+  errorFormatter.github:
+    class: PrestaShop\CodingStandards\ErrorFormatter\GithubErrorFormatter
+    arguments:
+      relativePathHelper: @simpleRelativePathHelper
+      showTipsOfTheDay: %tipsOfTheDay%
