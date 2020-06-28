@@ -482,16 +482,16 @@
         },
         {
             "name": "prestashop/header-stamp",
-            "version": "v1.1",
+            "version": "v1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PrestaShopCorp/header-stamp.git",
-                "reference": "799abb7b463849987f6485248fc7dcb8f6c5f64c"
+                "reference": "de13a0abe0134ec70099bb4bdd974fd190f581c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PrestaShopCorp/header-stamp/zipball/799abb7b463849987f6485248fc7dcb8f6c5f64c",
-                "reference": "799abb7b463849987f6485248fc7dcb8f6c5f64c",
+                "url": "https://api.github.com/repos/PrestaShopCorp/header-stamp/zipball/de13a0abe0134ec70099bb4bdd974fd190f581c8",
+                "reference": "de13a0abe0134ec70099bb4bdd974fd190f581c8",
                 "shasum": ""
             },
             "require": {
@@ -501,7 +501,7 @@
                 "symfony/finder": "^3.4"
             },
             "require-dev": {
-                "prestashop/php-coding-standards": "dev-master"
+                "prestashop/php-dev-tools": "1.*"
             },
             "bin": [
                 "bin/header-stamp"
@@ -523,8 +523,8 @@
                 }
             ],
             "description": "Rewrite your file headers to add the license or to make them up-to-date",
-            "homepage": "https://github.com/PrestaShop/pimp_my_header",
-            "time": "2019-11-05T12:08:24+00:00"
+            "homepage": "https://github.com/PrestaShopCorp/header-stamp",
+            "time": "2020-06-15T09:24:54+00:00"
         },
         {
             "name": "psr/log",
