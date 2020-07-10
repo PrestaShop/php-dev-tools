@@ -66,12 +66,6 @@ Otherwise, you can specify the path to the PHPStan binary. For instance:
 $ _PS_ROOT_DIR_=<Path_to_PrestaShop> php ~/.composer/vendor/bin/phpstan.phar --configuration=tests/phpstan/phpstan.neon analyse <path1 [path2 [...]]>
 ```
 
-If GitHub Actions are used to run PHPStan, an additional error formater allows feedback to be added as annotations in pull-requests diff:
-
-![Report with annotation](https://user-images.githubusercontent.com/6768917/82919118-82a00c00-9f6d-11ea-8519-267aad6897d4.png)
-
-Add `--error-format github` at the end of the command to use it.
-
 ### Header Stamp
 
 Your license headers can be updated by applying the header stamp.
