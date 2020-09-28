@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cdd1b34e71d5cfa01184462ee5450ef8",
+    "content-hash": "991b3c71e3ad9bce275fd59a452178a1",
     "packages": [
         {
             "name": "composer/semver",
@@ -531,16 +531,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.45",
+            "version": "0.12.46",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "90c67259212ed891ee86604a9368ef7d7bead3a4"
+                "reference": "9419738e20f0c49757be05d22969c1c44c1dff3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/90c67259212ed891ee86604a9368ef7d7bead3a4",
-                "reference": "90c67259212ed891ee86604a9368ef7d7bead3a4",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/9419738e20f0c49757be05d22969c1c44c1dff3b",
+                "reference": "9419738e20f0c49757be05d22969c1c44c1dff3b",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +583,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-26T19:19:00+00:00"
+            "time": "2020-09-28T09:48:55+00:00"
         },
         {
             "name": "prestashop/header-stamp",
@@ -636,8 +636,14 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "../../..",
+                "url": "https://github.com/PrestaShop/php-dev-tools.git",
                 "reference": "01c27954fbcccbec0a8ad04c913e43832b1343ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PrestaShop/php-dev-tools/zipball/01c27954fbcccbec0a8ad04c913e43832b1343ad",
+                "reference": "01c27954fbcccbec0a8ad04c913e43832b1343ad",
+                "shasum": ""
             },
             "require": {
                 "friendsofphp/php-cs-fixer": "^2.14",
@@ -656,6 +662,7 @@
                     "PrestaShop\\CodingStandards\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],

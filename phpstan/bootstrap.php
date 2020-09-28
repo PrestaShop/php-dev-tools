@@ -1,11 +1,15 @@
 <?php
-declare(strict_types = 1);
 
-function requireFileIfItExists(string $filepath) : bool {
+declare(strict_types=1);
+
+function requireFileIfItExists(string $filepath): bool
+{
     if (file_exists($filepath)) {
         require_once $filepath;
+
         return true;
     }
+
     return false;
 }
 
@@ -19,7 +23,7 @@ if (!$rootDir) {
 $pathToModuleRoot = __DIR__ . '/../../../../';
 
 // Add module composer autoloader
-require_once  realpath(__DIR__ . '/../../../autoload.php');
+require_once realpath(__DIR__ . '/../../../autoload.php');
 
 // Add PrestaShop composer autoload
 define('_PS_ADMIN_DIR_', $rootDir . '/admin-dev/');
@@ -54,8 +58,8 @@ $loader->register(true);
  * At this time if _PS_VERSION_ is still undefined, this is likely because
  * - we are on a old PrestaShop (below 1.7.0.0),
  * - and the shop hasn't been installed yet.
- * 
- * In that case, the constant can be set from another file in the installation folder. 
+ *
+ * In that case, the constant can be set from another file in the installation folder.
  */
 if (!defined('_PS_VERSION_')) {
     $legacyInstallationFileDefiningConstant = [
@@ -70,13 +74,12 @@ if (!defined('_PS_VERSION_')) {
     }
 }
 
-/**
+/*
  * Display version of PrestaShop, useful for debug
  */
 if (defined('_PS_VERSION_')) {
     echo 'Detected PS version ' . _PS_VERSION_ . PHP_EOL;
 }
-
 
 // We must declare these constant in this boostrap script.
 // Ignoring the error partern with this value will throw another error if not found
@@ -180,7 +183,7 @@ $constantsToDefine = [
       'type' => 'string',
   ],
   '_MODULE_DIR_' => [
-      'type' => 'string'
+      'type' => 'string',
   ],
 ];
 
@@ -191,7 +194,7 @@ foreach ($constantsToDefine as $key => $constantDetails) {
     }
 
     // Some constants exist from a specific version of PrestaShop.
-    // If the running PS version is below the one that created this constant, we pass. 
+    // If the running PS version is below the one that created this constant, we pass.
     if (!empty($constantDetails['from']) && defined('_PS_VERSION_') && version_compare(_PS_VERSION_, $constantDetails['from'], '<')) {
         continue;
     }
