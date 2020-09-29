@@ -1,0 +1,16 @@
+name: PHPStan
+on: [push, pull_request]
+jobs:
+  phpstan:
+    name: Custom rules check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.0.0
+
+
+      # Docker images prestashop/prestashop may be used, even if the shop remains uninstalled
+      - name: Run constant test
+        run: |
+          cd tests/modules_samples/constant_check
+          bash run.sh
