@@ -19,7 +19,7 @@ if (!$rootDir) {
     exit(1);
 }
 if (!realpath($rootDir)) {
-    echo sprintf("[ERROR] _PS_ROOT_DIR_ configuration is wrong. No directory found at %s .", $rootDir) . PHP_EOL;
+    echo sprintf('[ERROR] _PS_ROOT_DIR_ configuration is wrong. No directory found at %s .', $rootDir) . PHP_EOL;
     exit(1);
 }
 
