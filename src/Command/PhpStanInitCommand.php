@@ -37,6 +37,6 @@ class PhpStanInitCommand extends AbstractCommand
             );
         }
 
-        return self::SUCCESS;
+        return 0;
     }
 }
