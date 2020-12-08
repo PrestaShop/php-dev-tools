@@ -37,6 +37,6 @@ class CsFixerInitCommand extends AbstractCommand
             );
         }
 
-        return self::SUCCESS;
+        return 0;
     }
 }
