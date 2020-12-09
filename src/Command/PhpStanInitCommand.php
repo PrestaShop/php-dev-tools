@@ -36,5 +36,7 @@ class PhpStanInitCommand extends AbstractCommand
                 $destination . '/' . $template
             );
         }
+
+        return 0;
     }
 }
