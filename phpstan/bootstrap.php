@@ -36,6 +36,7 @@ define('PS_ADMIN_DIR', _PS_ADMIN_DIR_);
 requireFileIfItExists($rootDir . '/tools/smarty/Smarty.class.php');
 requireFileIfItExists($rootDir . '/config/defines.inc.php');
 requireFileIfItExists($rootDir . '/config/autoload.php');
+requireFileIfItExists($rootDir . '/config/defines_uri.inc.php');
 requireFileIfItExists($rootDir . '/config/bootstrap.php');
 
 // Make sure loader php-parser is coming from php stan composer
