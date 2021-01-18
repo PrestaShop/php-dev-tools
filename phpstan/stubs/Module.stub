@@ -25,5 +25,15 @@ namespace {
     {
         /** @var string */
         public $version;
+
+        /**
+         * Return type was wrong until 1.7.7.0
+         * https://github.com/PrestaShop/PrestaShop/commit/9a8144a15d21e3fdcde3e2a703de3339be6e8295
+         *
+         * @param string $module_name Module name
+         *
+         * @return Module|false
+         */
+        public static function getInstanceByName($module_name) {}
     }
 }
