@@ -28,7 +28,7 @@ class CsFixerInitCommand extends AbstractCommand
         $directory = __DIR__ . '/../../templates/cs-fixer/';
         $destination = $input->getOption('dest');
 
-        foreach (['php_cs.dist', 'prettyci.composer.json'] as $template) {
+        foreach (['php_cs.dist'] as $template) {
             $this->copyFile(
                 $input,
                 $output,
