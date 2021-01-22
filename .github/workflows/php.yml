@@ -23,16 +23,16 @@ jobs:
       matrix:
         php: ['7.3', '7.4']
     steps:
-        -   name: Setup PHP
-            uses: shivammathur/setup-php@v2
-            with:
-                php-version: ${{ matrix.php }}
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
 
-        -   name: Checkout
-            uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-        -   name: Composer Install
-            run: composer install --ansi --prefer-dist --no-interaction --no-progress --quiet
+      - name: Composer Install
+        run: composer install --ansi --prefer-dist --no-interaction --no-progress --quiet
 
         -   name: Run PHPCSFixer
             run: ./vendor/bin/php-cs-fixer fix --dry-run --diff
