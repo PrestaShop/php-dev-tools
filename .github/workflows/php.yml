@@ -3,7 +3,7 @@ on: [push, pull_request]
 jobs:
   # Check there is no syntax errors in the project
   php-linter:
-    name:  PHP Syntax check
+    name: PHP Syntax check
     runs-on: ubuntu-latest
     strategy:
         matrix:
