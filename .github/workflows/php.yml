@@ -12,8 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.0.0
 
-        -   name: PHP Syntax Checker
-            run: sh -c "! (find . -type f -name \"*.php\" $1 -exec php -l -n {} \; | grep -v \"No syntax errors detected\")"
+      - name: PHP Syntax Checker
+        run: sh -c "! (find . -type f -name \"*.php\" $1 -exec php -l -n {} \; | grep -v \"No syntax errors detected\")"
 
   # Check the PHP code follow the coding standards
   php-cs-fixer:
