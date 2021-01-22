@@ -34,5 +34,5 @@ jobs:
       - name: Composer Install
         run: composer install --ansi --prefer-dist --no-interaction --no-progress --quiet
 
-        -   name: Run PHPCSFixer
-            run: ./vendor/bin/php-cs-fixer fix --dry-run --diff
+      - name: Run PHP CS Fixer
+        run: ./vendor/bin/php-cs-fixer fix --dry-run --diff
