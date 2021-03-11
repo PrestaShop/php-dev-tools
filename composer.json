@@ -10,6 +10,9 @@
     "symfony/filesystem": "~3.2 || ~4.0 || ~5.0",
     "prestashop/header-stamp": "^1.0"
   },
+  "conflict": {
+    "friendsofphp/php-cs-fixer": "2.18.3"
+  },
   "bin": ["bin/prestashop-coding-standards"],
   "autoload": {
     "psr-4": {
