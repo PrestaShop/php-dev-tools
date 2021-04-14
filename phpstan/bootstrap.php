@@ -5,7 +5,7 @@ declare(strict_types=1);
 function requireFileIfItExists(string $filepath): bool
 {
     if (file_exists($filepath)) {
-        require_once $filepath;
+        @require_once $filepath;
 
         return true;
     }
