@@ -3,12 +3,12 @@
   "description": "PrestaShop coding standards",
   "license": "MIT",
   "require": {
-    "php": ">=5.6.0",
+    "php": ">=7.2.5",
     "symfony/console": "~3.2 || ~4.0 || ~5.0",
     "friendsofphp/php-cs-fixer": "^2.14",
     "squizlabs/php_codesniffer": "^3.4",
     "symfony/filesystem": "~3.2 || ~4.0 || ~5.0",
-    "prestashop/header-stamp": "^1.0"
+    "prestashop/header-stamp": "^2.0"
   },
   "bin": ["bin/prestashop-coding-standards"],
   "autoload": {
@@ -18,7 +18,7 @@
   },
   "config": {
     "platform": {
-      "php": "5.6.0"
+      "php": "7.2.5"
     }
   }
 }
