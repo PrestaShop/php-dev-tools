@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PrestaShop\CodingStandards\Command;
 
 use Symfony\Component\Console\Input\InputInterface;
@@ -9,7 +11,7 @@ use Symfony\Component\Filesystem\Filesystem;
 
 class PhpStanInitCommand extends AbstractCommand
 {
-    protected function configure()
+    protected function configure(): void
     {
         $this->setName('phpstan:init')
             ->setDescription('Initialize phpstan environement')
@@ -22,7 +24,7 @@ class PhpStanInitCommand extends AbstractCommand
             );
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $fs = new Filesystem();
         $directory = __DIR__ . '/../../templates/phpstan/';

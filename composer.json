@@ -13,7 +13,9 @@
   "conflict": {
     "friendsofphp/php-cs-fixer": "2.18.3"
   },
-  "bin": ["bin/prestashop-coding-standards"],
+  "bin": [
+    "bin/prestashop-coding-standards"
+  ],
   "autoload": {
     "psr-4": {
       "PrestaShop\\CodingStandards\\": "src/"
@@ -23,5 +25,6 @@
     "platform": {
       "php": "7.2.5"
     }
-  }
+  },
+  "author": "PrestaShop"
 }
