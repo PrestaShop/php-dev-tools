@@ -32,6 +32,8 @@ require_once realpath(__DIR__ . '/../../../autoload.php');
 // Add PrestaShop composer autoload
 define('_PS_ADMIN_DIR_', $rootDir . '/admin-dev/');
 define('PS_ADMIN_DIR', _PS_ADMIN_DIR_);
+define('_THEME_NAME_', 'default-bootstrap');
+define('__PS_BASE_URI__', '/');
 
 requireFileIfItExists($rootDir . '/tools/smarty/Smarty.class.php');
 requireFileIfItExists($rootDir . '/config/defines.inc.php');
