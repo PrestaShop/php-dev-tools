@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+declare(strict_types=1);
+
 // OK, it's not, let give Composer autoloader a try!
 $autoloadFile = __DIR__.'/../../../autoload.php';
 if (file_exists($autoloadFile)) {

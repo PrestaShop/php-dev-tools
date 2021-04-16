@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PrestaShop\CodingStandards\Command;
 
 use Symfony\Component\Console\Command\Command;
@@ -19,7 +21,7 @@ abstract class AbstractCommand extends Command
      * @param string $source
      * @param string $destination
      */
-    protected function copyFile(InputInterface $input, OutputInterface $output, $source, $destination)
+    protected function copyFile(InputInterface $input, OutputInterface $output, string $source, string $destination): void
     {
         $fs = new Filesystem();
         if ($fs->exists($destination) && !$this->askForOverwrite($input, $output, $source, $destination)) {
@@ -55,11 +57,11 @@ abstract class AbstractCommand extends Command
     protected function askForOverwrite(
         InputInterface $input,
         OutputInterface $output,
-        $source,
-        $destination,
-        $message = null,
-        $default = false
-    ) {
+        string $source,
+        string $destination,
+        ?string $message = null,
+        bool $default = false
+    ): bool {
         if (null === $message) {
             $availableOptionsText = $default ? '[Y/n]' : '[y/N]';
             $message = sprintf(

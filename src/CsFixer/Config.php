@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PrestaShop\CodingStandards\CsFixer;
 
 use PhpCsFixer\Config as BaseConfig;
@@ -13,9 +15,9 @@ class Config extends BaseConfig
         $this->setRiskyAllowed(true);
     }
 
-    public function getRules()
+    public function getRules(): array
     {
-        $rules = [
+        return [
             '@Symfony' => true,
             'concat_space' => [
                 'spacing' => 'one',
@@ -42,7 +44,5 @@ class Config extends BaseConfig
             'non_printable_character' => true,
             'no_superfluous_phpdoc_tags' => false,
         ];
-
-        return $rules;
     }
 }
