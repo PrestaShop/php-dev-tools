@@ -32,6 +32,8 @@ require_once realpath(__DIR__ . '/../../../autoload.php');
 // Add PrestaShop composer autoload
 define('_PS_ADMIN_DIR_', $rootDir . '/admin-dev/');
 define('PS_ADMIN_DIR', _PS_ADMIN_DIR_);
+define('__PS_BASE_URI__', '/');
+define('_THEME_NAME_', 'default-bootstrap');
 
 requireFileIfItExists($rootDir . '/tools/smarty/Smarty.class.php');
 requireFileIfItExists($rootDir . '/config/defines.inc.php');
@@ -117,16 +119,10 @@ $constantsToDefine = [
   '_PS_SSL_PORT_' => [
       'type' => 'int',
   ],
-  '_THEME_NAME_' => [
-      'type' => 'string',
-  ],
   '_THEME_COL_DIR_' => [
       'type' => 'string',
   ],
   '_PARENT_THEME_NAME_' => [
-      'type' => 'string',
-  ],
-  '__PS_BASE_URI__' => [
       'type' => 'string',
   ],
   '_PS_PRICE_DISPLAY_PRECISION_' => [
