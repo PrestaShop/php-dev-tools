@@ -32,8 +32,8 @@ require_once realpath(__DIR__ . '/../../../autoload.php');
 // Add PrestaShop composer autoload
 define('_PS_ADMIN_DIR_', $rootDir . '/admin-dev/');
 define('PS_ADMIN_DIR', _PS_ADMIN_DIR_);
-define('_THEME_NAME_', 'default-bootstrap');
 define('__PS_BASE_URI__', '/');
+define('_THEME_NAME_', 'default-bootstrap');
 
 requireFileIfItExists($rootDir . '/tools/smarty/Smarty.class.php');
 requireFileIfItExists($rootDir . '/config/defines.inc.php');
@@ -92,106 +92,100 @@ if (defined('_PS_VERSION_')) {
 // Ignoring the error partern with this value will throw another error if not found
 // during the checks.
 $constantsToDefine = [
-  '_DB_SERVER_' => [
-      'type' => 'string',
-  ],
-  '_DB_NAME_' => [
-      'type' => 'string',
-  ],
-  '_DB_USER_' => [
-      'type' => 'string',
-  ],
-  '_DB_PASSWD_' => [
-      'type' => 'string',
-  ],
-  '_MYSQL_ENGINE_' => [
-      'type' => 'string',
-  ],
-  '_COOKIE_KEY_' => [
-      'type' => 'string',
-  ],
-  '_COOKIE_IV_' => [
-      'type' => 'string',
-  ],
-  '_DB_PREFIX_' => [
-      'type' => 'string',
-  ],
-  '_PS_SSL_PORT_' => [
-      'type' => 'int',
-  ],
-  '_THEME_NAME_' => [
-      'type' => 'string',
-  ],
-  '_THEME_COL_DIR_' => [
-      'type' => 'string',
-  ],
-  '_PARENT_THEME_NAME_' => [
-      'type' => 'string',
-  ],
-  '__PS_BASE_URI__' => [
-      'type' => 'string',
-  ],
-  '_PS_PRICE_DISPLAY_PRECISION_' => [
-      'type' => 'int',
-  ],
-  '_PS_PRICE_COMPUTE_PRECISION_' => [
-      'type' => 'string',
-      'from' => '1.6.0.11',
-  ],
-  '_PS_OS_CHEQUE_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_PAYMENT_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_PREPARATION_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_SHIPPING_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_DELIVERED_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_CANCELED_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_REFUND_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_ERROR_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_OUTOFSTOCK_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_OUTOFSTOCK_PAID_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_OUTOFSTOCK_UNPAID_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_BANKWIRE_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_PAYPAL_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_WS_PAYMENT_' => [
-      'type' => 'int',
-  ],
-  '_PS_OS_COD_VALIDATION_' => [
-      'type' => 'int',
-  ],
-  '_PS_THEME_DIR_' => [
-      'type' => 'string',
-  ],
-  '_PS_BASE_URL_' => [
-      'type' => 'string',
-  ],
-  '_MODULE_DIR_' => [
-      'type' => 'string',
-  ],
+    '_DB_SERVER_' => [
+        'type' => 'string',
+    ],
+    '_DB_NAME_' => [
+        'type' => 'string',
+    ],
+    '_DB_USER_' => [
+        'type' => 'string',
+    ],
+    '_DB_PASSWD_' => [
+        'type' => 'string',
+    ],
+    '_MYSQL_ENGINE_' => [
+        'type' => 'string',
+    ],
+    '_COOKIE_KEY_' => [
+        'type' => 'string',
+    ],
+    '_COOKIE_IV_' => [
+        'type' => 'string',
+    ],
+    '_DB_PREFIX_' => [
+        'type' => 'string',
+    ],
+    '_PS_SSL_PORT_' => [
+        'type' => 'int',
+    ],
+    '_THEME_COL_DIR_' => [
+        'type' => 'string',
+    ],
+    '_PARENT_THEME_NAME_' => [
+        'type' => 'string',
+    ],
+    '_PS_PRICE_DISPLAY_PRECISION_' => [
+        'type' => 'int',
+    ],
+    '_PS_PRICE_COMPUTE_PRECISION_' => [
+        'type' => 'string',
+        'from' => '1.6.0.11',
+    ],
+    '_PS_OS_CHEQUE_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_PAYMENT_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_PREPARATION_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_SHIPPING_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_DELIVERED_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_CANCELED_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_REFUND_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_ERROR_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_OUTOFSTOCK_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_OUTOFSTOCK_PAID_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_OUTOFSTOCK_UNPAID_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_BANKWIRE_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_PAYPAL_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_WS_PAYMENT_' => [
+        'type' => 'int',
+    ],
+    '_PS_OS_COD_VALIDATION_' => [
+        'type' => 'int',
+    ],
+    '_PS_THEME_DIR_' => [
+        'type' => 'string',
+    ],
+    '_PS_BASE_URL_' => [
+        'type' => 'string',
+    ],
+    '_MODULE_DIR_' => [
+        'type' => 'string',
+    ],
 ];
 
 foreach ($constantsToDefine as $key => $constantDetails) {
@@ -209,12 +203,12 @@ foreach ($constantsToDefine as $key => $constantDetails) {
     switch ($constantDetails['type']) {
         case 'string':
             define($key, 'DUMMY_VALUE');
-        break;
+            break;
         case 'int':
             define($key, 1);
-        break;
+            break;
         default:
             define($key, 'DUMMY_VALUE');
-        break;
+            break;
     }
 }
