@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "96481fdd80c24626122d152882e51b1a",
+    "content-hash": "9bf0ec7ce8cb0c0c87fb5784a8f0081c",
     "packages": [
         {
             "name": "composer/semver",
@@ -515,6 +515,56 @@
                 "source": "https://github.com/PHP-CS-Fixer/diff/tree/v1.3.1"
             },
             "time": "2020-10-14T08:39:05+00:00"
+        },
+        {
+            "name": "prestashop/autoindex",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PrestaShopCorp/autoindex.git",
+                "reference": "355c224de4ca8766d63a038dcdcb24f56cb19fec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PrestaShopCorp/autoindex/zipball/355c224de4ca8766d63a038dcdcb24f56cb19fec",
+                "reference": "355c224de4ca8766d63a038dcdcb24f56cb19fec",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "^4.10",
+                "php": ">=7.2",
+                "symfony/console": "^3.4 || ~4.0 || ~5.0",
+                "symfony/finder": "^3.4 || ~4.0 || ~5.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.83",
+                "prestashop/php-dev-tools": "1.*"
+            },
+            "bin": [
+                "bin/autoindex"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PrestaShop\\AutoIndex\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AFL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "PrestaShop SA",
+                    "email": "contact@prestashop.com"
+                }
+            ],
+            "description": "Automatically add an 'index.php' in all the current or specified directories and all sub-directories.",
+            "homepage": "https://github.com/PrestaShopCorp/autoindex",
+            "support": {
+                "source": "https://github.com/PrestaShopCorp/autoindex/tree/v2.0.0"
+            },
+            "time": "2021-06-09T15:37:17+00:00"
         },
         {
             "name": "prestashop/header-stamp",
@@ -2221,5 +2271,5 @@
     "platform-overrides": {
         "php": "7.2.5"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
