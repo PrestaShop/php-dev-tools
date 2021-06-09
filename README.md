@@ -6,6 +6,7 @@ Related packages:
 
 * [friendsofphp/php-cs-fixer](http://github.com/FriendsOfPHP/PHP-CS-Fixer)
 * [phpstan/phpstan](https://github.com/phpstan/phpstan)
+* [prestashop/autoindex](https://github.com/PrestaShopCorp/autoindex)
 * [prestashop/header-stamp](https://github.com/PrestaShopCorp/header-stamp)
 
 
@@ -64,6 +65,14 @@ Otherwise, you can specify the path to the PHPStan binary. For instance:
 
 ```php
 $ _PS_ROOT_DIR_=<Path_to_PrestaShop> php ~/.composer/vendor/bin/phpstan.phar --configuration=tests/phpstan/phpstan.neon analyse <path1 [path2 [...]]>
+```
+
+### Autoindex
+
+Applying an index.php file to all your project subfolders will be useful to avoid directories to be listed by the webserver.
+
+```php
+$ vendor/bin/autoindex
 ```
 
 ### Header Stamp

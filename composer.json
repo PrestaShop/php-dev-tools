@@ -8,7 +8,8 @@
     "friendsofphp/php-cs-fixer": "^2.14",
     "squizlabs/php_codesniffer": "^3.4",
     "symfony/filesystem": "~3.2 || ~4.0 || ~5.0",
-    "prestashop/header-stamp": "^1.0"
+    "prestashop/header-stamp": "^1.0",
+    "prestashop/autoindex": "^1.0"
   },
   "conflict": {
     "friendsofphp/php-cs-fixer": "2.18.3"
