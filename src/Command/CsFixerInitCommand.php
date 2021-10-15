@@ -7,7 +7,6 @@ namespace PrestaShop\CodingStandards\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Filesystem\Filesystem;
 
 class CsFixerInitCommand extends AbstractCommand
 {
@@ -26,16 +25,19 @@ class CsFixerInitCommand extends AbstractCommand
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $fs = new Filesystem();
         $directory = __DIR__ . '/../../templates/cs-fixer/';
         $destination = $input->getOption('dest');
 
-        foreach (['php_cs.dist'] as $template) {
+        // Try to delete the old dist file
+        $this->deleteFile($destination . '/.php_cs.dist');
+
+        // Create coonfig file
+        foreach (['.php-cs-fixer.dist.php'] as $template) {
             $this->copyFile(
                 $input,
                 $output,
                 $directory . $template,
-                $destination . '/.' . $template
+                $destination . '/' . $template
             );
         }
 

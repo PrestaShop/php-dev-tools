@@ -5,14 +5,11 @@
   "require": {
     "php": ">=7.2.5",
     "symfony/console": "~3.2 || ~4.0 || ~5.0",
-    "friendsofphp/php-cs-fixer": "^2.14",
+    "friendsofphp/php-cs-fixer": "^3.2",
     "squizlabs/php_codesniffer": "^3.4",
     "symfony/filesystem": "~3.2 || ~4.0 || ~5.0",
     "prestashop/header-stamp": "^2.0",
     "prestashop/autoindex": "^2.0"
-  },
-  "conflict": {
-    "friendsofphp/php-cs-fixer": "2.18.3"
   },
   "bin": [
     "bin/prestashop-coding-standards"

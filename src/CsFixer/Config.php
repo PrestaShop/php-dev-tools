@@ -38,9 +38,9 @@ class Config extends BaseConfig
                 'align' => 'left',
             ],
             'protected_to_private' => false,
-            'psr4' => false,
+            'psr_autoloading' => false,
             'self_accessor' => false,
-            'yoda_style' => null,
+            'yoda_style' => false,
             'non_printable_character' => true,
             'no_superfluous_phpdoc_tags' => false,
         ];
