@@ -32,7 +32,6 @@ class Config extends BaseConfig
             ],
             'function_to_constant' => false,
             'no_alias_functions' => false,
-            'non_printable_character' => false,
             'phpdoc_summary' => false,
             'phpdoc_align' => [
                 'align' => 'left',
