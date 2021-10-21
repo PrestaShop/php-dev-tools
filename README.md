@@ -24,7 +24,9 @@ When this project is successfully added to your dependencies, you can enable eac
 $ php vendor/bin/prestashop-coding-standards cs-fixer:init [--dest /path/to/my/project]
 ```
 
-It'll create a configuration file `.php_cs.dist` in the root of your project.
+It'll create a configuration file `.php-cs-fixer.dist.php` in the root of your project.
+
+**Upgrade note :** When upgrading from 4.1.0 to newer version, you should re-run the init script or rename your ``.php_cs.dist`` file to ``.php-cs-fixer.dist.php`` in order to match the new requirements of cs-fixer.
 
 ### Phpstan
 

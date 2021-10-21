@@ -76,4 +76,17 @@ abstract class AbstractCommand extends Command
 
         return $helper->ask($input, $output, $overwriteQuestion);
     }
+
+    /**
+     * Delete a file if exising
+     *
+     * @param string $filepath
+     */
+    protected function deleteFile(string $filepath): void
+    {
+        $fs = new Filesystem();
+        if ($fs->exists($filepath)) {
+            $fs->remove($filepath);
+        }
+    }
 }
