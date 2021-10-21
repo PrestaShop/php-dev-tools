@@ -31,7 +31,7 @@ class CsFixerInitCommand extends AbstractCommand
         // Try to delete the old dist file
         $this->deleteFile($destination . '/.php_cs.dist');
 
-        // Create coonfig file
+        // Create config file
         foreach (['.php-cs-fixer.dist.php'] as $template) {
             $this->copyFile(
                 $input,
