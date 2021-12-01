@@ -4,10 +4,8 @@ require_once './src/CsFixer/Config.php';
 
 $config = new PrestaShop\CodingStandards\CsFixer\Config();
 
-$config
-    ->setUsingCache(true)
-    ->getFinder()
-    ->in(__DIR__)
-    ->exclude('vendor');
+/** @var \Symfony\Component\Finder\Finder $finder */
+$finder = $config->setUsingCache(true)->getFinder();
+$finder->in(__DIR__)->exclude('vendor');
 
 return $config;
