@@ -51,8 +51,8 @@ Running the tools can be done by calling its binary:
 
 ### PHP CS Fixer
 
-```php
-php vendor/bin/php-cs-fixer fix
+```bash
+$ vendor/bin/php-cs-fixer fix
 ```
 
 ### PHPStan
