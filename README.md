@@ -1,5 +1,8 @@
 # PrestaShop Coding Standards
 
+[![Latest Stable Version](https://img.shields.io/packagist/v/prestashop/php-dev-tools.svg?style=flat-square)](https://packagist.org/packages/prestashop/php-dev-tools) [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.2.5-8892BF.svg?style=flat-square)](https://php.net/) [![Quality Control Status](https://img.shields.io/github/workflow/status/prestashop/php-dev-tools/PHP%20tests?style=flat-square)](https://github.com/prestashop/php-dev-tools/actions/workflows/php.yml)
+
+
 This repository includes tools to check that repositories are following the standards defined by the PrestaShop community and provides configuration files for some of them.
 
 Related packages:
@@ -17,6 +20,20 @@ composer require --dev prestashop/php-dev-tools
 ```
 
 When this project is successfully added to your dependencies, you can enable each review tool on your projet.
+
+## Version Guidance
+
+| Version | Status         | Packagist           -| Namespace    | Repo                | Docs                | PHP Version  |
+|---------|----------------|----------------------|--------------|---------------------|---------------------|--------------|
+| 1.x     | EOL         | `prestashop/php-dev-tools` | N/A  | [v1.x][lib-1-repo] | N/A                 | >=5.6,<7.2  |
+| 2.x     | EOL         | `prestashop/php-dev-tools` | N/A  | [v2.x][lib-2-repo] | N/A                 | >=5.6,<7.2  |
+| 3.x     | Security fixes         | `prestashop/php-dev-tools` | N/A  | [v3.x][lib-3-repo] | N/A                 | >=5.6,>=7.2.5  |
+| 4.x     | Latest         | `prestashop/php-dev-tools` | N/A  | [v4.x][lib-4-repo] | N/A                 | >=7.2.5  |
+
+[lib-1-repo]: https://github.com/PrestaShop/php-dev-tools/tree/1.x
+[lib-2-repo]: https://github.com/PrestaShop/php-dev-tools/tree/2.x
+[lib-3-repo]: https://github.com/PrestaShop/php-dev-tools/tree/3.x
+[lib-4-repo]: https://github.com/PrestaShop/php-dev-tools/tree/master
 
 ### PHP Cs fixer
 
