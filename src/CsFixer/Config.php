@@ -31,6 +31,9 @@ class Config extends BaseConfig
                 'noise_remaining_usages_exclude' => [],
             ],
             'function_to_constant' => false,
+            'visibility_required' => [
+                'elements' => ['property', 'method'],
+            ],
             'no_alias_functions' => false,
             'phpdoc_summary' => false,
             'phpdoc_align' => [
