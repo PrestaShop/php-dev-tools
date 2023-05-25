@@ -91,7 +91,7 @@ $ _PS_ROOT_DIR_=<Path_to_PrestaShop> php ~/.composer/vendor/bin/phpstan.phar --c
 Applying an index.php file to all your project subfolders will be useful to avoid directories to be listed by the webserver.
 
 ```php
-$ vendor/bin/autoindex
+$ vendor/bin/autoindex prestashop:add:index <path>
 ```
 
 ### Header Stamp
