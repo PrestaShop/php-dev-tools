@@ -35,12 +35,14 @@ When this project is successfully added to your dependencies, you can enable eac
 | 1.x     | EOL         | `prestashop/php-dev-tools` | N/A  | [v1.x][lib-1-repo] | N/A                 | >=5.6,<7.2  |
 | 2.x     | EOL         | `prestashop/php-dev-tools` | N/A  | [v2.x][lib-2-repo] | N/A                 | >=5.6,<7.2  |
 | 3.x     | Security fixes         | `prestashop/php-dev-tools` | N/A  | [v3.x][lib-3-repo] | N/A                 | >=5.6,>=7.2.5  |
-| 4.x     | Latest         | `prestashop/php-dev-tools` | N/A  | [v4.x][lib-4-repo] | N/A                 | >=7.2.5  |
+| 4.x     | EOL         | `prestashop/php-dev-tools` | N/A  | [v4.x][lib-4-repo] | N/A                 | >=7.2.5  |
+| 5.x     | Latest         | `prestashop/php-dev-tools` | N/A  | [master][master-repo] | N/A                 | >=7.2.5  |
 
 [lib-1-repo]: https://github.com/PrestaShop/php-dev-tools/tree/1.x
 [lib-2-repo]: https://github.com/PrestaShop/php-dev-tools/tree/2.x
 [lib-3-repo]: https://github.com/PrestaShop/php-dev-tools/tree/3.x
-[lib-4-repo]: https://github.com/PrestaShop/php-dev-tools/tree/master
+[lib-4-repo]: https://github.com/PrestaShop/php-dev-tools/tree/4.x
+[master-repo]: https://github.com/PrestaShop/php-dev-tools/tree/master
 
 
 
