@@ -1,8 +1,18 @@
 {
   "license": "MIT",
   "require": {
-    "phpstan/phpstan": "^0.12",
-    "prestashop/php-dev-tools": "@dev"
+    "php": ">=7.4",
+    "phpstan/phpstan": "^1.8",
+    "prestashop/php-dev-tools": "@dev",
+    "prestashop/header-stamp": "^2.0",
+    "prestashop/autoindex": "^2.0",
+    "squizlabs/php_codesniffer": "^3.4",
+    "friendsofphp/php-cs-fixer": "^3.2"
+  },
+  "config": {
+    "platform": {
+      "php": "7.4.0"
+    }
   },
   "autoload": {
     "classmap": [
@@ -12,7 +22,10 @@
   "repositories": [
     {
         "type": "path",
-        "url": "../../.."
+        "url": "../../..",
+        "options": {
+          "symlink": false
+        }
     }
   ]
 }

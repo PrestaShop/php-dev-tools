@@ -15,8 +15,15 @@ Related packages:
 
 ## Installation
 
-```
+```bash
 composer require --dev prestashop/php-dev-tools
+
+## Development dependencies runtimes
+composer require --dev friendsofphp/php-cs-fixer
+composer require --dev phpstan/phpstan
+composer require --dev prestashop/header-stamp
+composer require --dev prestashop/autoindex
+composer require --dev squizlabs/php_codesniffer
 ```
 
 When this project is successfully added to your dependencies, you can enable each review tool on your projet.
@@ -35,8 +42,17 @@ When this project is successfully added to your dependencies, you can enable eac
 [lib-3-repo]: https://github.com/PrestaShop/php-dev-tools/tree/3.x
 [lib-4-repo]: https://github.com/PrestaShop/php-dev-tools/tree/master
 
-### PHP Cs fixer
 
+
+## Usage
+
+The configuration files added in your project can be freely modified in order to match your needs.
+
+Running the tools can be done by calling their respective binary:
+
+### PHP CS Fixer
+
+Initialize the configuration with:
 ```bash 
 $ php vendor/bin/prestashop-coding-standards cs-fixer:init [--dest /path/to/my/project]
 ```
@@ -45,7 +61,11 @@ It'll create a configuration file `.php-cs-fixer.dist.php` in the root of your p
 
 **Upgrade note :** When upgrading from 4.1.0 to newer version, you should re-run the init script or rename your ``.php_cs.dist`` file to ``.php-cs-fixer.dist.php`` in order to match the new requirements of cs-fixer.
 
-### Phpstan
+```bash
+$ vendor/bin/php-cs-fixer fix
+```
+
+### PHPStan
 
 ```bash
 $ php vendor/bin/prestashop-coding-standards phpstan:init [--dest /path/to/my/project]
@@ -54,36 +74,8 @@ $ php vendor/bin/prestashop-coding-standards phpstan:init [--dest /path/to/my/pr
 It'll create a default file `phpstan.neon` in `tests/phpstan`, that are required to run phpstan.
 The default phpstan level is the lowest available, but we recommend you to update this value to get more recommandations.
 
-PHPStan is not provided by our dependencies, because of the PHP compatibility from projects using this repository. We recommend you to install it globally on your environment:
-
-```
-composer global require phpstan/phpstan:^0.12
-```
-
-## Usage
-
-The configuration files added in your project can be freely modified in order to match your needs.
-
-Running the tools can be done by calling its binary:
-
-### PHP CS Fixer
-
-```bash
-$ vendor/bin/php-cs-fixer fix
-```
-
-### PHPStan
-
-If you have installed PHPStan globally and made the folder available in your PATH:
-
 ```php
-$ _PS_ROOT_DIR_=<Path_to_PrestaShop> phpstan --configuration=tests/phpstan/phpstan.neon analyse <path1 [path2 [...]]>
-```
-
-Otherwise, you can specify the path to the PHPStan binary. For instance:
-
-```php
-$ _PS_ROOT_DIR_=<Path_to_PrestaShop> php ~/.composer/vendor/bin/phpstan.phar --configuration=tests/phpstan/phpstan.neon analyse <path1 [path2 [...]]>
+$ _PS_ROOT_DIR_=<Path_to_PrestaShop> php vendor/bin/phpstan --configuration=tests/phpstan/phpstan.neon analyse <path1 [path2 [...]]>
 ```
 
 ### Autoindex
