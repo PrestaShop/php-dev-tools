@@ -21,6 +21,7 @@ composer install
 # For copy of phpstan folder, in case we work on another branch locally
 cp -R ../../../phpstan vendor/prestashop/php-dev-tools/
 
+runPHPStan 9 0
 runPHPStan 8 0
 runPHPStan 1.7 0
 runPHPStan 1.6.0.1 1
