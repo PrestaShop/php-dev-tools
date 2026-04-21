@@ -31,7 +31,7 @@ class Config extends BaseConfig
                 'noise_remaining_usages_exclude' => [],
             ],
             'function_to_constant' => false,
-            'visibility_required' => [
+            'modifier_keywords' => [
                 'elements' => ['property', 'method'],
             ],
             'no_alias_functions' => false,
