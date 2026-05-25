@@ -35,6 +35,7 @@ class Config extends BaseConfig
                 'elements' => ['property', 'method'],
             ],
             'no_alias_functions' => false,
+            'blank_line_after_opening_tag' => false,
             'phpdoc_summary' => false,
             'phpdoc_align' => [
                 'align' => 'left',
