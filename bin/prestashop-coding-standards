@@ -15,8 +15,10 @@ if (file_exists($autoloadFile)) {
 use Symfony\Component\Console\Application;
 use PrestaShop\CodingStandards\Command\CsFixerInitCommand;
 use PrestaShop\CodingStandards\Command\PhpStanInitCommand;
+use PrestaShop\CodingStandards\Command\BumpVersionCommand;
 
 $app = new Application();
 $app->add(new CsFixerInitCommand());
 $app->add(new PhpStanInitCommand());
+$app->add(new BumpVersionCommand());
 $app->run();

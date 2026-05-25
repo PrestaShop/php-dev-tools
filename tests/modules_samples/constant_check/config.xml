@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>constant_check</name>
+    <displayName><![CDATA[Constant Check]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Test module for constant checking]]></description>
+    <author><![CDATA[PrestaShopCorp]]></author>
+    <tab><![CDATA[advertising_marketing]]></tab>
+</module>

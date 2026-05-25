@@ -55,7 +55,7 @@ Running the tools can be done by calling their respective binary:
 ### PHP CS Fixer
 
 Initialize the configuration with:
-```bash 
+```bash
 $ php vendor/bin/prestashop-coding-standards cs-fixer:init [--dest /path/to/my/project]
 ```
 
@@ -99,3 +99,17 @@ $ vendor/bin/header-stamp --license=assets/afl.txt --exclude=vendor,node_modules
 ```
 
 Available options are provided with `--help`.
+
+### Bump Module Version
+
+Bump your module version number using [Semantic Versioning](https://semver.org/) in preparation for new release.
+
+Updates module `$this->version` value in the module main php class file and `<version>` tag in `config.xml` file (if present).
+
+```bash
+$ php vendor/bin/prestashop-coding-standards bump-version patch    # 1.2.3 → 1.2.4
+$ php vendor/bin/prestashop-coding-standards bump-version minor    # 1.2.3 → 1.3.0
+$ php vendor/bin/prestashop-coding-standards bump-version major    # 1.2.3 → 2.0.0
+```
+
+The current version is read from the module main php file `$this->version` and bumped
