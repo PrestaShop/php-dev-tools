@@ -8,7 +8,7 @@
     "symfony/filesystem": "~3.2 || ~4.0 || ~5.0 || ~6.0 || ~7.0"
   },
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.2"
+    "friendsofphp/php-cs-fixer": "^3.95"
   },
   "suggest": {
     "prestashop/header-stamp": "^2.0",
